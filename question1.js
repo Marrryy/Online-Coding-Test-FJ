@@ -6,8 +6,6 @@
 function solution(record) {
   var answer=[], name=[];
 
-  console.log(record)
-
   for(i=0; i<record.length ;i++){
     const split = record[i].split(" ");
 
@@ -21,9 +19,9 @@ function solution(record) {
     //find 1 one of this .if same replace
     if(save.cmd === "Change" || save.cmd === "Enter"){
 
-      for(i=0; i<name.length ;i++){
-        if(name[i].id === save.id ){
-          name[i].name = save.name
+      for(j=0; j<name.length ;j++){
+        if(name[j].id === save.id ){
+          name[j].name = save.name
         }
       }
 
@@ -45,5 +43,6 @@ function solution(record) {
     }
   }
 
+  console.log(answer)
   return answer;
 }
